@@ -7,7 +7,7 @@ description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin-dx
-image-version: 41.20250206.2 # latest is also supported if you want new updates ASAP
+image-version: gts # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -17,14 +17,18 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - type: rpm-ostree
-    repos:
-      - https://negativo17.org/repos/fedora-multimedia.repo
+  # - type: rpm-ostree
+  #   repos:
+  #     - https://negativo17.org/repos/fedora-multimedia.repo
       
-  - type: akmods
-    base: main
+  # - type: akmods
+  #   base: main
+  #   install:
+  #     - evdi
+
+  - type: rpm-ostree
     install:
-      - evdi
+      - evdi.rpm
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)

@@ -20,8 +20,9 @@ modules:
   - type: rpm-ostree
     remove:
       - lutris
-      - steam
       - steam-devices
+      - steam-device-rules
+      - steam
       
   # - type: akmods
   #   base: main

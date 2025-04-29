@@ -19,10 +19,10 @@ jobs:
     name: Build Custom Image
     runs-on: 
     - self-hosted
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
+    # permissions:
+    #   contents: read
+    #   packages: write
+    #   id-token: write
     strategy:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:

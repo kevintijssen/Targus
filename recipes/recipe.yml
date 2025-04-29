@@ -21,6 +21,7 @@ modules:
     remove:
       - lutris
       - steam
+      - steam-devices
       
   # - type: akmods
   #   base: main

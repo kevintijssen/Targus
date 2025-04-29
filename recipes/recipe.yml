@@ -26,9 +26,9 @@ modules:
   #   install:
   #     - evdi
 
-  - type: rpm-ostree
-    install:
-      - evdi.rpm
+  # - type: rpm-ostree
+  #   install:
+  #     - evdi.rpm
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
